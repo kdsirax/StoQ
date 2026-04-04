@@ -82,6 +82,14 @@ export default function NewsCard({
           <p className="text-sm text-slate-500">{source}</p>
 
           <div className="flex items-center gap-3">
+            
+           
+            {/* top stock signal */}
+         <div className="flex items-center gap-3 flex-wrap">
+            <span className="px-2 py-1 text-xs rounded-md bg-blue-50 text-blue-700 font-medium">
+              {primaryStock}
+            </span>
+
             <Badge className={signalStyle}>
               {signal}
             </Badge>
@@ -89,6 +97,7 @@ export default function NewsCard({
             <span className="text-sm font-medium text-slate-600">
               {(confidence * 100).toFixed(0)}%
             </span>
+          </div>
 
             {/* Language toggle */}
             <div className="flex gap-1 ml-auto">
