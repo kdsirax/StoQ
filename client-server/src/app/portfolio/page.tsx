@@ -32,10 +32,10 @@ export default function PortfolioPage() {
   return (
     <main className="portfolio-page">
       <div className="portfolio-header">
-        <div className="portfolio-header-left">
+                <div className="portfolio-header-left">
           <Link href="/dashboard" className="back-btn">
-                  ← Dashboard
-                  </Link>
+            ← Dashboard
+          </Link>
           <span className="portfolio-label">MY PORTFOLIO</span>
           <h1 className="portfolio-title">
             Welcome, {session.user?.name?.split(" ")[0]}
