@@ -6,7 +6,7 @@ from openai_agent import extraction_agent
 from quant_agent import quant_agent
 from presenter_agent import presenter_agent
 
-app = FastAPI(title="Stock-IQ Agentic Backend")
+app = FastAPI(title="StoQ Agentic Backend")
 
 app.add_middleware(
     CORSMiddleware,
