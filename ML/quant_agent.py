@@ -76,7 +76,7 @@ def quant_agent(ticker: str, news_text: str, ai_weight: float = 1.0) -> Processe
     
     if abs_sent >= 0.80:
         news_wt, tech_wt = 0.70, 0.30 
-        state = "High-conviction news dominating"
+        state = "Big news is strongly affecting this stock right now"
     elif abs_sent >= 0.50:
         news_wt, tech_wt = 0.55, 0.45 
         state = "News-led market blend"
