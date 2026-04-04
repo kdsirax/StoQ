@@ -20,7 +20,7 @@ export async function runNewsPipeline() {
 
     // Step 3: merge fetched data + ML output
     const mergedNews = fetchedNews.map(
-  (article, index: number) => {
+  (article:any, index: number) => {
     const mlArticle = mlResult[index];
 
     const impactedDomains =
