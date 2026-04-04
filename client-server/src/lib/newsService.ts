@@ -17,7 +17,7 @@ export async function fetchFinanceNews() {
 
     const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(
       query
-    )}&from=${fromDate}&to=${toDate}&sortBy=publishedAt&language=en&pageSize=15&apiKey=${process.env.NEWS_API_KEY}`;
+    )}&from=${fromDate}&to=${toDate}&sortBy=publishedAt&language=en&pageSize=17&apiKey=${process.env.NEWS_API_KEY}`;
 
     const response = await fetch(url);
 
@@ -27,11 +27,13 @@ export async function fetchFinanceNews() {
 
     return data.articles
       .filter(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (article: any) =>
           article.title &&
           article.title !== "[Removed]" &&
           article.description
       )
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .map((article: any, index: number) => ({
         article_id: index + 1,
         date: article.publishedAt?.slice(0, 10),
